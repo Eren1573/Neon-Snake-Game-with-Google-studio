@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00f3ff;
+  --color-neon-magenta: #ff00ff;
+  --color-neon-purple: #b026ff;
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #050508;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@utility glow-cyan {
+  box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, inset 0 0 10px rgba(0,243,255,0.2);
+}
+@utility glow-magenta {
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, inset 0 0 10px rgba(255,0,255,0.2);
+}
+@utility text-glow-cyan {
+  text-shadow: 0 0 8px #00f3ff, 0 0 20px #00f3ff;
+}
+@utility text-glow-magenta {
+  text-shadow: 0 0 8px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* Modern Cyber Grid */
+.bg-cyber-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
